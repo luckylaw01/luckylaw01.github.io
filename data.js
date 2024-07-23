@@ -20,7 +20,8 @@ window.instructors = [
         facebook: "#",
         twitter: "#",
         instagram: "#",
-        bio: "Emmanuel Omondi is a software engineer with over 3 years of experience. He has worked on a wide range of projects, from small websites to large web applications. He is passionate about teaching and sharing his knowledge with others."
+        bio: "Emmanuel Omondi is a software engineer with over 3 years of experience. He has worked on a wide range of projects, from small websites to large web applications. He is passionate about teaching and sharing his knowledge with others.",
+        courses: [2, 12]
     },
     {
         id: 3,
@@ -30,7 +31,8 @@ window.instructors = [
         facebook: "#",
         twitter: "#",
         instagram: "#",
-        bio: "James Kivuti is a software developer with over 6 years of experience. He has worked on a wide range of projects, from small websites to large web applications. He is passionate about teaching and sharing his knowledge with others."
+        bio: "James Kivuti is a software developer with over 6 years of experience. He has worked on a wide range of projects, from small websites to large web applications. He is passionate about teaching and sharing his knowledge with others.",
+        courses: [3, 8]
     },
     {
         id: 4,
@@ -40,23 +42,25 @@ window.instructors = [
         facebook: "#",
         twitter: "#",
         instagram: "#",
-        bio: "Wilfred Mukiri is a graphics designer with over 8 years of experience. He has worked on a wide range of projects, from small websites to large web applications. He is passionate about teaching and sharing his knowledge with others."
+        bio: "Wilfred Mukiri is a graphics designer with over 8 years of experience. He has worked on a wide range of projects, from small websites to large web applications. He is passionate about teaching and sharing his knowledge with others.",
+        courses: [9, 10]
 
     },
     {
         id: 5,
         name: "Samuel Mwangi",
-        title: "Software Development",
+        title: "Python Developer",
         image: "img/instructor-samuel-mwangi.jpg",
         facebook: "#",
         twitter: "#",
         instagram: "#",
-        bio: "Samuel is a software developer with over 10 years of experience. He has worked on a wide range of projects, from small websites to large web applications. He is passionate about teaching and sharing his knowledge with others."
+        bio: "Samuel is a software developer with over 10 years of experience. He has worked on a wide range of projects, from small websites to large web applications. He is passionate about teaching and sharing his knowledge with others.",
+        courses: [11]
     }
 ];
 
 // Function to add instructors
-function addInstructor(newId, newName, newTitle, newImage, newFacebook, newTwitter, newInstagram, newBio) {
+function addInstructor(newId, newName, newTitle, newImage, newFacebook, newTwitter, newInstagram, newBio, courses) {
     const newInstructor = {
         id: newId,
         name: newName,
@@ -65,7 +69,8 @@ function addInstructor(newId, newName, newTitle, newImage, newFacebook, newTwitt
         facebook: newFacebook,
         twitter: newTwitter,
         instagram: newInstagram,
-        bio: newBio
+        bio: newBio,
+        courses: courses
     };
     instructors.push(newInstructor);
 }
@@ -109,8 +114,8 @@ window.courses = [
         id: 2,
         title: "Data Science",
         description: "This course is designed to give students a foundational understanding of data science. Students will learn the basics of Python, R, and SQL.",
-        instructorId: 2,
-        instructor: instructors[1].name,
+        instructorId: instructors[4].id,
+        instructor: instructors[4].name,
         price: 15000,
         image: "img/course-data-science.jpg",
         duration: "4 months",
@@ -393,11 +398,11 @@ addCourse(
     11,
     "Python Programming",
     "This course is designed to give students a foundational understanding of Python programming. Students will learn the basics of variables, functions, and loops.",
-    instructors[0].id,
-    instructors[0].name,
+    instructors[4].id,
+    instructors[4].name,
     20000,
     "img/course-python.jpg",
-    "6 months",
+    "3 months",
     "Expert",
     30,
     5,

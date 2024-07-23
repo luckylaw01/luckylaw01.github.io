@@ -81,7 +81,7 @@ courseDetails.innerHTML = `
                         <div>
                             <h5 class="mb-0">${courses[courseId].instructor}
                             </h5>
-                            <p class="mb-0">Web Developer</p>
+                            <p class="mb-0">${instructors[instructorId].title}</p>
                         </div>
                     </div>
                 </div>
@@ -94,7 +94,7 @@ courseDetails.innerHTML = `
                                 <li><i class="bi bi-clock me-2"></i>Duration: ${courses[courseId].duration}</li>
                                 <li><i class="bi bi-people me-2"></i>Students: ${courses[courseId].students}</li>
                                 <li><i class="bi bi-award me-2"></i>Certificate: Yes</li>
-                                <li><i class="bi bi-currency-dollar me-2"></i>Price: $${courses[courseId].price}</li>
+                                <li><i class="bi bi-currency-dollar me-2"></i>Price: Ksh. ${courses[courseId].price}</li>
                             </ul>
                             <a href="" class="btn btn-primary w-100">Enroll Now</a>
                         </div>
@@ -113,13 +113,19 @@ courseInstructor.innerHTML = `
                         <img class="img-fluid" src="${instructors[instructorId].image}" alt="">
                         <div class="card-body">
                             <h5 class="card-title">${courses[courseId].instructor}</h5>
-                            <p class="card-text">Web Developer</p>
+                            <p class="card-text">${instructors[instructorId].title}</p>
                             <a href="" class="btn btn-primary mb-2">View Profile</a>
                             <a href="${instructors[instructorId].facebook}" class="btn btn-primary mb-2">Facebook</a>
                             <a href="${instructors[instructorId].twitter}" class="btn btn-primary mb-2">Twitter</a>
                             <a href="${instructors[instructorId].instagram}" class="btn btn-primary mb-2">Instagram</a>
                         </div>
                     </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="mb-5"></div>
+                    <h4>About ${courses[courseId].instructor}</h4>
+                    <p>${instructors[instructorId].bio}</p>    
+                    
                 </div>
             </div>
         </div>
@@ -143,6 +149,7 @@ relatedCourses.innerHTML = `
                         <div class="card">
                             <img class="img-fluid" src="${course.image}" alt="">
                             <div class="card-body">
+                                
                                 <h5 class="card-title">${course.title}</h5>
                                 <p class="card-text">${course.description}</p>
                                 <a href="course.html?id=${course.id}" class="btn btn-primary">View Course</a>
