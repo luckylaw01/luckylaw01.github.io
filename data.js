@@ -56,6 +56,17 @@ window.instructors = [
         instagram: "#",
         bio: "Samuel is a software developer with over 10 years of experience. He has worked on a wide range of projects, from small websites to large web applications. He is passionate about teaching and sharing his knowledge with others.",
         courses: [11]
+    },
+    {
+        id: 6,
+        name: "Ian Pius",
+        title: "Senior Web Developer",
+        image: "img/instructor-ian-pius.jpg",
+        facebook: "#",
+        twitter: "#",
+        instagram: "#",
+        bio: "Ian is a software developer with over 10 years of experience. He has worked on a wide range of projects, from small websites to large web applications. He is passionate about teaching and sharing his knowledge with others.",
+        courses: [1]
     }
 ];
 
@@ -83,15 +94,15 @@ window.courses = [
         id: 1,
         title: "Web Development",
         description: "This course is designed to give students a foundational understanding of web development. Students will learn the basics of HTML, CSS, and JavaScript.",
-        instructorId: 1,
-        instructor: instructors[0].name,
+        instructorId: instructors[5].id,
+        instructor: instructors[5].name,
         price: 10000,
         image: "img/course-web-design.jpg",
         duration: "3 months",
         level: "Beginner",
         students: 27,
         rating: 5,
-        category: "Web Development",
+        category: "webDevelopment",
         isForColleges: true,
         isOngoing: true,
         topics: [
@@ -122,7 +133,7 @@ window.courses = [
         level: "Intermediate",
         students: 65,
         rating: 5,
-        category: "Data Science",
+        category: "softwareEngineering",
         isForColleges: true,
         isOngoing: true,
         topics: [
@@ -153,7 +164,7 @@ window.courses = [
         level: "Advanced",
         students: 10,
         rating: 4,
-        category: "Software Engineering",
+        category: "softwareEngineering",
         isForColleges: true,
         isOngoing: true,
         topics: [
@@ -180,7 +191,7 @@ window.courses = [
         level: "Expert",
         students: 5,
         rating: 30,
-        category: "Structured Programming",
+        category: "knecMasterclasses",
         isForColleges: true,
         isOngoing: true,
         topics: [
@@ -206,7 +217,7 @@ window.courses = [
         level: "beginner",
         students: 5,
         rating: 30,
-        category: "OOP",
+        category: "knecMasterclasses",
         isForColleges: true,
         isOngoing: true,
         topics: [
@@ -233,7 +244,7 @@ window.courses = [
             level: "student",
             students: 8,
             rating: 29,
-            category: "OOP",
+            category: "softwareEngineering",
             isForColleges: true,
             isOngoing: true,
             topics: [
@@ -260,7 +271,7 @@ window.courses = [
             level: "beginner",
             students: 10,
             rating: 30,
-            category: "Accounting",
+            category: "knecMasterclasses",
             isForColleges: true,
             isOngoing: true,
             topics: [
@@ -273,7 +284,8 @@ window.courses = [
                     subtopics: ["Ledgers", "Journals"]
                 }
             ]
-        }
+        },
+
 ]
 
 // What syntax error do i have saying unexpected token 'function'?
@@ -325,7 +337,7 @@ addCourse(
     "Beginner",
     15,
     4,
-    "Graphics Design",
+    "graphicsDesign",
     true,
     true,
     [
@@ -352,7 +364,7 @@ addCourse(
     "Intermediate",
     20,
     5,
-    "Graphics Design",
+    "graphicsDesign",
     true,
     true,
     [
@@ -379,7 +391,7 @@ addCourse(
     "Advanced",
     25,
     4,
-    "GIS",
+    "knecMasterclasses",
     true,
     true,
     [
@@ -406,7 +418,7 @@ addCourse(
     "Expert",
     30,
     5,
-    "Software Engineering",
+    "softwareEngineering",
     true,
     true,
     [
@@ -437,7 +449,7 @@ addCourse(
     "Expert",
     35,
     4,
-    "Backend Development",
+    "webDevelopment",
     true,
     true,
     [
@@ -455,6 +467,67 @@ addCourse(
         }
     ]
 );
+
+addCourse(
+    13,
+    "Databases",
+    "This course is designed to give students a foundational understanding of databases. Students will learn the basics of SQL, MySQL, and PostgreSQL.",
+    instructors[5].id,
+    instructors[5].name,
+    9000,
+    "img/course-databases.jpg",
+    "2 months",
+    "Expert",
+    35,
+    4,
+    "webDevelopment",
+    true,
+    true,
+    [
+        {
+            title: "SQL",
+            subtopics: ["Select", "Insert", "Update"]
+        },
+        {
+            title: "MySQL",
+            subtopics: ["Tables", "Indexes", "Views"]
+        },
+        {
+            title: "PostgreSQL",
+            subtopics: ["Schemas", "Sequences", "Triggers"]
+        }
+    ]
+);
+
+addCourse(
+    14,
+    "Adobe Premiere Pro",
+    "This course is designed to give students a foundational understanding of Adobe Premiere Pro. Students will learn the basics of video editing and production.",
+    instructors[3].id,
+    instructors[3].name,
+    10000,
+    "img/course-premiere-pro.jpg",
+    "1 month",
+    "Intermediate",
+    20,
+    5,
+    "graphicsDesign",
+    true,
+    true,
+    [
+        {
+            title: "Video Editing",
+            subtopics: ["Cutting", "Trimming", "Splitting"]
+        },
+        {
+            title: "Production",
+            subtopics: ["Transitions", "Effects", "Titles"]
+        }
+    ]
+);
+
+
+
 
 
 
