@@ -97,6 +97,10 @@ courseDetails.innerHTML = `
                                 <li><i class="bi bi-currency-dollar me-2"></i>Price: Ksh. ${courses[courseId].price}</li>
                             </ul>
                             <a href="" class="btn btn-primary w-100">Enroll Now</a>
+                            
+                            <div class="mb-3"></div>
+                            <h5 class="card-title ">Are you a college?</h5>
+                            <a href="" class="btn btn-primary w-100">Request this Instructor</a>
                         </div>
                     </div>
                 </div>
