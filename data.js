@@ -67,6 +67,17 @@ window.instructors = [
         instagram: "#",
         bio: "Ian is a software developer with over 10 years of experience. He has worked on a wide range of projects, from small websites to large web applications. He is passionate about teaching and sharing his knowledge with others.",
         courses: [1]
+    },
+    {
+        id: 7,
+        name: "Tabitha Waithera",
+        title: "Cybersecurity Engineer",
+        image: "img/instructor-tabitha-waithera.jpg",
+        facebook: "#",
+        twitter: "#",
+        instagram: "#",
+        bio: "Tabitha is a cybersecurity engineer with over 3 years of experience. She has worked on a wide range of projects, from small websites to large web applications. She is passionate about teaching and sharing her knowledge with others.",
+        courses: [5]
     }
 ];
 
@@ -285,11 +296,285 @@ window.courses = [
                 }
             ]
         },
+        {
+            id: 8,
+            title: "AutoCAD",
+            description: "This course is designed to give students a foundational understanding of AutoCAD. Students will learn the basics of 2D and 3D modeling.",
+            instructorId: instructors[2].id,
+            instructor: instructors[2].name,
+            price: 10000,
+            image: "img/course-autocad.jpg",
+            duration: "2 months",
+            level: "Beginner",
+            students: 15,
+            rating: 4,
+            category: "graphicsDesign",
+            isForColleges: true,
+            isOngoing: true,
+            topics: [
+                {
+                    title: "2D Modeling",
+                    subtopics: ["Lines", "Circles", "Rectangles"]
+                },
+                {
+                    title: "3D Modeling",
+                    subtopics: ["Extrude", "Revolve", "Sweep"]
+                }
+            ]
+        },
+        {
+            id: 9,
+            title: "Adobe Photoshop",
+            description: "This course is designed to give students a foundational understanding of Adobe Photoshop. Students will learn the basics of photo editing and graphic design.",
+            instructorId: instructors[3].id,
+            instructor: instructors[3].name,
+            price: 12000,
+            image: "img/course-photoshop.jpg",
+            duration: "1 month",
+            level: "Intermediate",
+            students: 20,
+            rating: 5,
+            category: "graphicsDesign",
+            isForColleges: true,
+            isOngoing: true,
+            topics: [
+                {
+                    title: "Photo Editing",
+                    subtopics: ["Cropping", "Resizing", "Adjusting Brightness"]
+                },
+                {
+                    title: "Graphic Design",
+                    subtopics: ["Layers", "Text", "Shapes"]
+                }
+            ]
+        },
+        {
+            id: 10,
+            title: "Geographic Information Systems (GIS)",
+            description: "This course is designed to give students a foundational understanding of Geographic Information Systems (GIS). Students will learn the basics of mapping and spatial analysis.",
+            instructorId: instructors[4].id,
+            instructor: instructors[4].name,
+            price: 15000,
+            image: "img/course-gis.jpg",
+            duration: "1 month",
+            level: "Advanced",
+            students: 25,
+            rating: 4,
+            category: "knecMasterclasses",
+            isForColleges: true,
+            isOngoing: true,
+            topics: [
+                {
+                    title: "Mapping",
+                    subtopics: ["Layers", "Symbols", "Labels"]
+                },
+                {
+                    title: "Spatial Analysis",
+                    subtopics: ["Buffering", "Overlay", "Intersect"]
+                }
+            ]
+        },
+        {
+            id: 11,
+            title: "Python Programming",
+            description: "This course is designed to give students a foundational understanding of Python programming. Students will learn the basics of variables, functions, and loops.",
+            instructorId: instructors[4].id,
+            instructor: instructors[4].name,
+            price: 20000,
+            image: "img/course-python.jpg",
+            duration: "3 months",
+            level: "Expert",
+            students: 30,
+            rating: 5,
+            category: "softwareEngineering",
+            isForColleges: true,
+            isOngoing: true,
+            topics: [
+                {
+                    title: "Variables",
+                    subtopics: ["Integers", "Floats", "Strings"]
+                },
+                {
+                    title: "Functions",
+                    subtopics: ["Parameters", "Return Values"]
+                },
+                {
+                    title: "Loops",
+                    subtopics: ["For Loops", "While Loops"]
+                }
+            ]
+        },
+        {
+            id: 12,
+            title: "Backend Development",
+            description: "This course is designed to give students a foundational understanding of backend development. Students will learn the basics of Node.js, Express, and MongoDB.",
+            instructorId: instructors[1].id,
+            instructor: instructors[1].name,
+            price: 25000,
+            image: "img/course-backend.jpg",
+            duration: "3 months",
+            level: "Expert",
+            students: 35,
+            rating: 4,
+            category: "webDevelopment",
+            isForColleges: true,
+            isOngoing: true,
+            topics: [
+                {
+                    title: "Node.js",
+                    subtopics: ["Modules", "NPM", "Events"]
+                },
+                {
+                    title: "Express",
+                    subtopics: ["Routes", "Middleware", "Templates"]
+                },
+                {
+                    title: "MongoDB",
+                    subtopics: ["Collections", "Documents", "Queries"]
+                }
+            ]
+        },
+        {
+            id: 13,
+            title: "Databases",
+            description: "This course is designed to give students a foundational understanding of databases. Students will learn the basics of SQL, MySQL, and PostgreSQL.",
+            instructorId: instructors[5].id,
+            instructor: instructors[5].name,
+            price: 9000,
+            image: "img/course-databases.jpg",
+            duration: "2 months",
+            level: "Expert",
+            students: 35,
+            rating: 4,
+            category: "webDevelopment",
+            isForColleges: true,
+            isOngoing: true,
+            topics: [
+                {
+                    title: "SQL",
+                    subtopics: ["Select", "Insert", "Update"]
+                },
+                {
+                    title: "MySQL",
+                    subtopics: ["Tables", "Indexes", "Views"]
+                },
+                {
+                    title: "PostgreSQL",
+                    subtopics: ["Schemas", "Sequences", "Triggers"]
+                }
+            ]
+        },
+        {
+            id: 14,
+            title: "Adobe Premiere Pro",
+            description: "This course is designed to give students a foundational understanding of Adobe Premiere Pro. Students will learn the basics of video editing and production.",
+            instructorId: instructors[3].id,
+            instructor: instructors[3].name,
+            price: 10000,
+            image: "img/course-premiere-pro.jpg",
+            duration: "1 month",
+            level: "Intermediate",
+            students: 20,
+            rating: 5,
+            category: "graphicsDesign",
+            isForColleges: true,
+            isOngoing: true,
+            topics: [
+                {
+                    title: "Video Editing",
+                    subtopics: ["Cutting", "Trimming", "Splitting"]
+                },
+                {
+                    title: "Production",
+                    subtopics: ["Transitions", "Effects", "Titles"]
+                }
+            ]
+        },
+        {
+            id: 15,
+            title: "Cybersecurity",
+            description: "This course is designed to give students a foundational understanding of cybersecurity. Students will learn the basics of ethical hacking and network security.",
+            instructorId: instructors[6].id,
+            instructor: instructors[6].name,
+            price: 15000,
+            image: "img/course-cyber-security.jpg",
+            duration: "2 months",
+            level: "Advanced",
+            students: 25,
+            rating: 4,
+            category: "knecMasterclasses",
+            isForColleges: true,
+            isOngoing: true,
+            topics: [
+                {
+                    title: "Ethical Hacking",
+                    subtopics: ["Footprinting", "Scanning"]
+                },
+                {
+                    title: "Network Security",
+                    subtopics: ["Firewalls", "Intrusion Detection Systems"]
+                }
+            ]
+        },
+        {
+            id: 16,
+            title: "Artificial Intelligence",
+            description: "This course is designed to give students a foundational understanding of artificial intelligence. Students will learn the basics of machine learning and deep learning.",
+            instructorId: instructors[6].id,
+            instructor: instructors[5].name,
+            price: 20000,
+            image: "img/course-artificial-intelligence.jpg",
+            duration: "3 months",
+            level: "Expert",
+            students: 30,
+            rating: 5,
+            category: "softwareEngineering",
+            isForColleges: true,
+            isOngoing: true,
+            topics: [
+                {
+                    title: "Machine Learning",
+                    subtopics: ["Supervised", "Unsupervised"]
+                },
+                {
+                    title: "Deep Learning",
+                    subtopics: ["Neural Networks", "Convolutional Networks"]
+                }
+            ]
+        },
+        {
+            id: 17,
+            title: "Cloud Computing",
+            description: "This course is designed to give students a foundational understanding of cloud computing. Students will learn the basics of AWS, Azure, and Google Cloud.",
+            instructorId: instructors[1].id,
+            instructor: instructors[1].name,
+            price: 25000,
+            image: "img/course-cloud-computing.jpg",
+            duration: "3 months",
+            level: "Expert",
+            students: 35,
+            rating: 4,
+            category: "softwareEngineering",
+            isForColleges: true,
+            isOngoing: true,
+            topics: [
+                {
+                    title: "AWS",
+                    subtopics: ["EC2", "S3", "RDS"]
+                },
+                {
+                    title: "Azure",
+                    subtopics: ["Virtual Machines", "Blob Storage", "SQL Database"]
+                },
+                {
+                    title: "Google Cloud",
+                    subtopics: ["Compute Engine", "Cloud Storage", "BigQuery"]
+                }
+            ]
+        }
 
 ]
 
-// What syntax error do i have saying unexpected token 'function'?
-// I have to add a closing bracket to the end of the file
 
 // Function to add courses
 function addCourse(newId, newTitle, newDescription, instructorId, instructor, price, image, duration, level, students, rating, category, isForColleges, isOngoing, topics) {
@@ -316,215 +601,9 @@ function addCourse(newId, newTitle, newDescription, instructorId, instructor, pr
     courses.push(newCourse);
 }
 
-/*
-    Add the following courses:
-    - AutoCAD
-    - Adobe Photoshop
-    - Geographic Information Systems (GIS)
-    - Python Programming
-    - Backend Development
-*/
 
-addCourse(
-    8,
-    "AutoCAD",
-    "This course is designed to give students a foundational understanding of AutoCAD. Students will learn the basics of 2D and 3D modeling.",
-    instructors[2].id,
-    instructors[2].name,
-    10000,
-    "img/course-autocad.jpg",
-    "2 months",
-    "Beginner",
-    15,
-    4,
-    "graphicsDesign",
-    true,
-    true,
-    [
-        {
-            title: "2D Modeling",
-            subtopics: ["Lines", "Circles", "Rectangles"]
-        },
-        {
-            title: "3D Modeling",
-            subtopics: ["Extrude", "Revolve", "Sweep"]
-        }
-    ]
-);
 
-addCourse(
-    9,
-    "Adobe Photoshop",
-    "This course is designed to give students a foundational understanding of Adobe Photoshop. Students will learn the basics of photo editing and graphic design.",
-    instructors[3].id,
-    instructors[3].name,
-    12000,
-    "img/course-photoshop.jpg",
-    "1 month",
-    "Intermediate",
-    20,
-    5,
-    "graphicsDesign",
-    true,
-    true,
-    [
-        {
-            title: "Photo Editing",
-            subtopics: ["Cropping", "Resizing", "Adjusting Brightness"]
-        },
-        {
-            title: "Graphic Design",
-            subtopics: ["Layers", "Text", "Shapes"]
-        }
-    ]
-);
 
-addCourse(
-    10,
-    "Geographic Information Systems (GIS)",
-    "This course is designed to give students a foundational understanding of Geographic Information Systems (GIS). Students will learn the basics of mapping and spatial analysis.",
-    instructors[4].id,
-    instructors[4].name,
-    15000,
-    "img/course-gis.jpg",
-    "1 month",
-    "Advanced",
-    25,
-    4,
-    "knecMasterclasses",
-    true,
-    true,
-    [
-        {
-            title: "Mapping",
-            subtopics: ["Layers", "Symbols", "Labels"]
-        },
-        {
-            title: "Spatial Analysis",
-            subtopics: ["Buffering", "Overlay", "Intersect"]
-        }
-    ]
-);
-
-addCourse(
-    11,
-    "Python Programming",
-    "This course is designed to give students a foundational understanding of Python programming. Students will learn the basics of variables, functions, and loops.",
-    instructors[4].id,
-    instructors[4].name,
-    20000,
-    "img/course-python.jpg",
-    "3 months",
-    "Expert",
-    30,
-    5,
-    "softwareEngineering",
-    true,
-    true,
-    [
-        {
-            title: "Variables",
-            subtopics: ["Integers", "Floats", "Strings"]
-        },
-        {
-            title: "Functions",
-            subtopics: ["Parameters", "Return Values"]
-        },
-        {
-            title: "Loops",
-            subtopics: ["For Loops", "While Loops"]
-        }
-    ]
-);
-
-addCourse(
-    12,
-    "Backend Development",
-    "This course is designed to give students a foundational understanding of backend development. Students will learn the basics of Node.js, Express, and MongoDB.",
-    instructors[1].id,
-    instructors[1].name,
-    25000,
-    "img/course-backend.jpg",
-    "3 months",
-    "Expert",
-    35,
-    4,
-    "webDevelopment",
-    true,
-    true,
-    [
-        {
-            title: "Node.js",
-            subtopics: ["Modules", "NPM", "Events"]
-        },
-        {
-            title: "Express",
-            subtopics: ["Routes", "Middleware", "Templates"]
-        },
-        {
-            title: "MongoDB",
-            subtopics: ["Collections", "Documents", "Queries"]
-        }
-    ]
-);
-
-addCourse(
-    13,
-    "Databases",
-    "This course is designed to give students a foundational understanding of databases. Students will learn the basics of SQL, MySQL, and PostgreSQL.",
-    instructors[5].id,
-    instructors[5].name,
-    9000,
-    "img/course-databases.jpg",
-    "2 months",
-    "Expert",
-    35,
-    4,
-    "webDevelopment",
-    true,
-    true,
-    [
-        {
-            title: "SQL",
-            subtopics: ["Select", "Insert", "Update"]
-        },
-        {
-            title: "MySQL",
-            subtopics: ["Tables", "Indexes", "Views"]
-        },
-        {
-            title: "PostgreSQL",
-            subtopics: ["Schemas", "Sequences", "Triggers"]
-        }
-    ]
-);
-
-addCourse(
-    14,
-    "Adobe Premiere Pro",
-    "This course is designed to give students a foundational understanding of Adobe Premiere Pro. Students will learn the basics of video editing and production.",
-    instructors[3].id,
-    instructors[3].name,
-    10000,
-    "img/course-premiere-pro.jpg",
-    "1 month",
-    "Intermediate",
-    20,
-    5,
-    "graphicsDesign",
-    true,
-    true,
-    [
-        {
-            title: "Video Editing",
-            subtopics: ["Cutting", "Trimming", "Splitting"]
-        },
-        {
-            title: "Production",
-            subtopics: ["Transitions", "Effects", "Titles"]
-        }
-    ]
-);
 
 
 
