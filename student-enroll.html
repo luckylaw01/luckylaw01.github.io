@@ -104,9 +104,9 @@ It also provides a platform for lecturers to request for assignment and thei stu
     <div class="page-header bg-light py-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
-                    <h1>Enroll in a Course</h1>
-                    <p class="text-muted
+                <div class="col-lg-6" style="display: flex; flex-direction: column; justify-content: center;">
+                    <h1 class="text-light">Enroll in a Course</h1>
+                    <p class="text-light
                     ">Enroll in a course and start learning today.</p>
                 </div>
                 <div class="col-lg-6">
@@ -118,124 +118,114 @@ It also provides a platform for lecturers to request for assignment and thei stu
     <!-- Page Header End -->
 
     <!-- Enroll Start -->
-<div class="container py-5">
-    <div class="row">
-        <div class="col-lg-8">
-            <h4 class="mb-4">Enroll in a Course</h4>
-            <form id="enroll-form" class="row g-3">
-                <div class="col-md-6">
-                    <label for="first-name" class="form-label">First Name</label>
-                    <input type="text" class="form-control" id="first-name" name="first-name" placeholder="Enter your first name">
-                    <div class="invalid-feedback"></div>
-                </div>
-                <div class="col-md-6">
-                    <label for="last-name" class="form-label">Last Name</label>
-                    <input type="text" class="form-control" id="last-name" name="last-name" placeholder="Enter your last name">
-                    <div class="invalid-feedback"></div>
-                </div>
-                <div class="col-md-6">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
-                    <div class="invalid-feedback"></div>
-                </div>
-                <div class="col-md-6">
-                    <label for="phone" class="form-label">Phone Number</label>
-                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number">
-                    <div class="invalid-feedback"></div>
-                </div>
-                <div class="col-md-6">
-                    <label for="gender" class="form-label">Gender</label>
-                    <select class="form-control" id="gender" name="gender">
-                        <option value="" disabled selected>Select your gender</option>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                        <option value="other">Other</option>
-                    </select>
-                    <div class="invalid-feedback"></div>
-                </div>
-                <div class="col-md-6">
-                    <label for="address" class="form-label">Address</label>
-                    <input type="text" class="form-control" id="address" name="address" placeholder="Enter your address (County, Hometown)">
-                    <div class="invalid-feedback"></div>
-                </div>
-                <div class="col-md-6">
-                    <label for="course" class="form-label">Course</label>
-                    <select class="form-control" id="course" name="course">
-                        <option value="" disabled selected>Select a course</option>
-                        <option value="web-development">Web Development</option>
-                        <option value="software-engineering">Software Engineering</option>
-                        <option value="graphics-design">Graphics Design</option>
-                    </select>
-                    <div class="invalid-feedback"></div>
-                </div>
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <h4 class="mb-4">Enroll in a Course</h4>
+                <form id="enroll-form" class="row g-3">
+                    <div class="col-md-6">
+                        <label for="first-name" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="first-name" name="first-name" placeholder="Enter your first name" required>
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="last-name" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="last-name" name="last-name" placeholder="Enter your last name" required>
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" required>
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="gender" class="form-label">Gender</label>
+                        <select class="form-control" id="gender" name="gender" required>
+                            <option value="" disabled selected>Select your gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="address" class="form-label">Address</label>
+                        <input type="text" class="form-control" id="address" name="address" placeholder="Enter your address (County, Hometown)" required>
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="course" class="form-label">Course</label>
+                        <select class="form-control" id="course" name="course" required>
+                            <option value="" disabled selected>Select a course</option>
+                            <option value="web-development">Web Development</option>
+                            <option value="software-engineering">Software Engineering</option>
+                            <option value="graphics-design">Graphics Design</option>
+                        </select>
+                        <div class="invalid-feedback"></div>
+                    </div>
 
-                <input type="hidden" id="registration-number" name="registration-number">
+                    <input type="hidden" id="registration-number" name="registration-number">
 
-                <div class="col-12">
-                    <div class="alert alert-success d-none" role="alert"></div>
-                    <div class="alert alert-danger d-none" role="alert"></div>
-                </div>
+                    <div class="col-12">
+                        <div class="alert alert-success d-none" role="alert"></div>
+                        <div class="alert alert-danger d-none" role="alert"></div>
+                    </div>
 
-                <div class="col-12">
-                    <button type="submit" class="btn btn-primary">Enroll</button>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Enroll</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-4">
+                <div class="p-5 bg-light rounded">
+                    <h4 class="mb-4">Why Choose Us?</h4>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Military Grade Courses</li>
+                        <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Wide Range of ICT Fields</li>
+                        <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>High-Quality Education</li>
+                        <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Expert Instructors</li>
+                        <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Consultancy Services</li>
+                    </ul>
                 </div>
-            </form>
-        </div>
-        <div class="col-lg-4">
-            <div class="p-5 bg-light rounded">
-                <h4 class="mb-4">Why Choose Us?</h4>
-                <ul class="list-unstyled mb-0">
-                    <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Military Grade Courses</li>
-                    <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Wide Range of ICT Fields</li>
-                    <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>High-Quality Education</li>
-                    <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Expert Instructors</li>
-                    <li class="mb-2"><i class="fa fa-check text-primary me-2"></i>Consultancy Services</li>
-                </ul>
             </div>
         </div>
     </div>
-</div>
-<!-- Enroll End -->
+    <!-- Enroll End -->
 
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbycFZJT_iDE8yRyVe0oRlggW8vSK_5IZvpU-Qp9vDHDJdn4VDuDbBd75lz7Yumf128ZTw/exec';  // Replace with your Web app URL
-    const form = document.getElementById('enroll-form');
+    <script>
+        document.getElementById('enroll-form').onsubmit = function(e) {
+            e.preventDefault();
 
-    form.addEventListener('submit', e => {
-        e.preventDefault();
+            const formData = new FormData(this);
+            const data = {};
+            formData.forEach((value, key) => (data[key] = value));
 
-        const formData = new FormData(form);
+            // Assuming the registration number is generated here
+            data['registration-number'] = 'SOAP-SUD' + Math.floor(Math.random() * 10000);
 
-        fetch(scriptURL, {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => {
-            // Check if the response is valid JSON
-            return response.text().then(text => {
-                try {
-                    return JSON.parse(text);
-                } catch (error) {
-                    console.error('Failed to parse JSON:', text);
-                    throw error;
-                }
-            });
-        })
-        .then(data => {
-            if (data.result === 'success') {
-                document.querySelector('.alert-success').textContent = 'Enrollment successful!';
+            const regNumber = data['registration-number'];
+
+            fetch('https://script.google.com/macros/s/AKfycbzCzu0zod2zO8hCtqA4dtLBCKPLQgObBYT6gAy6VgaZmUdVunMH0fcwO5Fu6IYuvxL3tg/exec', {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: new URLSearchParams(data)
+            }).then(response => {
                 document.querySelector('.alert-success').classList.remove('d-none');
-            } else {
-                document.querySelector('.alert-danger').textContent = 'An error occurred: ' + (data.message || 'Unknown error');
+                document.querySelector('.alert-success').textContent = 'You have enrolled successfully! You will be contacted with details soon. Your registration number is ' + regNumber;
+            }).catch(error => {
                 document.querySelector('.alert-danger').classList.remove('d-none');
-            }
-        })
-        .catch(error => {
-            document.querySelector('.alert-danger').textContent = 'An error occurred: ' + error.message;
-            document.querySelector('.alert-danger').classList.remove('d-none');
-        });
-    });
-</script>
+                document.querySelector('.alert-danger').textContent = 'There was an error submitting the form.';
+            });
+        };
+    </script>
 
                                    
     <!-- Footer Start -->
@@ -254,7 +244,7 @@ It also provides a platform for lecturers to request for assignment and thei stu
                     <h4 class="text-white mb-3">Contact</h4>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Tumaini, Ongata Rongai, Kenya</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+254762303141</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>soap@onmail.com</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>soapinstitute@onmail.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>

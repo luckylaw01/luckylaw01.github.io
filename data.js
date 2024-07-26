@@ -245,8 +245,8 @@ window.courses = [
     
         {
             id: 6,
-            title: "Object Oriented Programming Advanced",
-            description: "This course is designed to give students a foundational understanding of object oriented programming. Students will learn the basics of inheritance and polymorphism.",
+            title: "Object Oriented Programming II",
+            description: "Java. This course is designed to give students a foundational understanding of object oriented programming. Students will learn the basics of inheritance and polymorphism.",
             instructorId: instructors[1].id,
             instructor: instructors[1].name,
             price: 7000,
@@ -521,7 +521,7 @@ window.courses = [
             title: "Artificial Intelligence",
             description: "This course is designed to give students a foundational understanding of artificial intelligence. Students will learn the basics of machine learning and deep learning.",
             instructorId: instructors[6].id,
-            instructor: instructors[5].name,
+            instructor: instructors[6].name,
             price: 20000,
             image: "img/course-artificial-intelligence.jpg",
             duration: "3 months",
