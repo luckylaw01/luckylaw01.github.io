@@ -1,18 +1,67 @@
 /*
-    populate the options with courses names from data.js
+    Replace with instructors from the array:
 
-    <label for="course" class="form-label">Preffered course</label>
-                        <select class="form-control" id="course" name="course" required>
-                            <option value="" disabled selected>Select a course</option>
-                            <option value="web-development">Web Development</option>
-                            <option value="software-engineering">Software Engineering</option>
-                            <option value="graphics-design">Graphics Design</option>
-                            <option value="knec-Masterclasses">KNEC Matserclasses</option>
-                        </select>
+                    <div class="mb-3">
+                                <label for="course" class="form-label
+                                ">Course</label>
+                                <select class="form-select" id="course" name="course" required>
+                                    <option value="">Select Course</option>
+                                    <option value="Web Development">Web Development</option>
+                                    <option value="Software Engineering">Software Engineering</option>
+                                    <option value="Software Applications">Software Applications</option>
+                                    <option value="Graphics Design">Graphics Design</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="instructor" class="form-label
+                                ">Instructor</label>
+                                <select class="form-select" id="instructor" name="instructor" required>
+                                    <option value="">Select Instructor</option>
+                                    <option value="John Doe">John Doe</option>
+                                    <option value="Jane Doe">Jane Doe</option>
+                                    <option value="James Doe">James Doe</option>
+                                    <option value="Jenny Doe">Jenny Doe</option>
+                                </select>
+                            </div>
 
-    course structre:
+                            // Array of instructors
+window.instructors = [
+    {
+        id: 1,
+        name: "L Munyaka",
+        title: "Web Development",
+        image: "img/instructor-l-munyaka.jpg",
+        facebook: "#",
+        twitter: "#",
+        instagram: "#",
+        bio: "L Munyaka is a web developer with over 5 years of experience. He has worked on a wide range of projects, from small websites to large web applications. He is passionate about teaching and sharing his knowledge with others."
+    },
+    {
+        id: 2,
+        name: "Emmanuel Omondi",
+        title: "Software Engineering",
+        image: "img/instructor-emanuel-omondi.jpg",
+        facebook: "#",
+        twitter: "#",
+        instagram: "#",
+        bio: "Emmanuel Omondi is a software engineer with over 3 years of experience. He has worked on a wide range of projects, from small websites to large web applications. He is passionate about teaching and sharing his knowledge with others.",
+        courses: [2, 12]
+    },
+    {
+        id: 3,
+        name: "James Kivuti",
+        title: "Software Development",
+        image: "img/instructor-james-kivuti.jpg",
+        facebook: "#",
+        twitter: "#",
+        instagram: "#",
+        bio: "James Kivuti is a software developer with over 6 years of experience. He has worked on a wide range of projects, from small websites to large web applications. He is passionate about teaching and sharing his knowledge with others.",
+        courses: [3, 8]
+    }
+]
 
-    // Array of courses
+// Array of courses
+// Array of courses
 window.courses = [
     {
         id: 1,
@@ -128,64 +177,13 @@ window.courses = [
                 subtopics: ["Clustering", "Association"]
             }
         ]
-    },
-    {
-        id: 5,
-        title: "Object Oriented Programming",
-        description: "This course is designed to give students a foundational understanding of object oriented programming. Students will learn the basics of inheritance and polymorphism.",
-        instructorId: instructors[0].id,
-        instructor: instructors[0].name,
-        price: 5000,
-        image: "img/course-oop-c++.jpg",
-        duration: "1 month",
-        level: "beginner",
-        students: 5,
-        rating: 30,
-        category: "knecMasterclasses",
-        isForColleges: true,
-        isOngoing: true,
-        topics: [
-            {
-                title: "Ethical Hacking",
-                subtopics: ["Footprinting", "Scanning"]
-            },
-            {
-                title: "Network Security",
-                subtopics: ["Firewalls", "Intrusion Detection Systems"]
-            }
-        ]
-    },
-    
-        {
-            id: 6,
-            title: "Object Oriented Programming II",
-            description: "Java. This course is designed to give students a foundational understanding of object oriented programming. Students will learn the basics of inheritance and polymorphism.",
-            instructorId: instructors[1].id,
-            instructor: instructors[1].name,
-            price: 7000,
-            image: "img/course-oop-java.jpg",
-            duration: "1.5 months",
-            level: "student",
-            students: 8,
-            rating: 29,
-            category: "softwareEngineering",
-            isForColleges: true,
-            isOngoing: true,
-            topics: [
-                {
-                    title: "Ethical Hacking",
-                    subtopics: ["Footprinting", "Scanning"]
-                },
-                {
-                    title: "Network Security",
-                    subtopics: ["Firewalls", "Intrusion Detection Systems"]
-                }
-            ]
-        }
-];
-*/
+    }
+]
+
+                            */
 
 const courseSelect = document.getElementById('course');
+const instructorSelect = document.getElementById('instructor');
 
 // Populate the options with courses names from data.js
 courses.forEach(course => {
@@ -193,5 +191,13 @@ courses.forEach(course => {
     option.value = course.id;
     option.textContent = course.title;
     courseSelect.appendChild(option);
+});
+
+// Populate the options with instructors names from data.js
+instructors.forEach(instructor => {
+    const option = document.createElement('option');
+    option.value = instructor.id;
+    option.textContent = instructor.name;
+    instructorSelect.appendChild(option);
 });
 

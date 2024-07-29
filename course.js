@@ -100,7 +100,7 @@ courseDetails.innerHTML = `
                             
                             <div class="mb-3"></div>
                             <h5 class="card-title ">Are you a college?</h5>
-                            <a href="" class="btn btn-primary w-100">Request this Instructor</a>
+                            <a href="college-request.html?id=${courseId}&instructorId=${instructorId}" class="btn btn-primary w-100">Request Course</a>
                         </div>
                     </div>
                 </div>
