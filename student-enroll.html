@@ -56,6 +56,9 @@ It also provides a platform for lecturers to request for assignment and thei stu
     <link href="css/style.css" rel="stylesheet">
     <script src="data.js" defer></script>
     <script src="student-enroll.js" defer></script>
+    <!-- emailJS -->
+
+
 </head>
 
 <body>
@@ -216,8 +219,8 @@ It also provides a platform for lecturers to request for assignment and thei stu
     </div>
     <!-- Enroll End -->
 
-    <script>
 
+    <script>
         document.getElementById('has-registration-number').onchange = function() {
             const registrationNumberDiv = document.getElementById('registration-number-div');
             if (this.value === 'yes') {
@@ -251,6 +254,21 @@ It also provides a platform for lecturers to request for assignment and thei stu
             }).then(response => {
                 document.querySelector('.alert-success').classList.remove('d-none');
                 document.querySelector('.alert-success').textContent = 'You have enrolled successfully! You will be contacted with details soon. Your registration number is ' + regNumber;
+
+                // Send email using EmailJS
+                const templateParams = {
+                    firstName: data['first-name'],
+                    lastName: data['last-name'],
+                    courseName: data['course'],
+                    registrationNumber: regNumber
+                };
+
+                emailjs.send('service_lgsceer', 'template_tsu8n1l', templateParams, 'IehseaNhUpJYF6_RQ')
+                    .then(function(response) {
+                        console.log('Email sent successfully!', response.status, response.text);
+                    }, function(error) {
+                        console.error('Error sending email:', error);
+                    });
             }).catch(error => {
                 document.querySelector('.alert-danger').classList.remove('d-none');
                 document.querySelector('.alert-danger').textContent = 'There was an error submitting the form.';
@@ -351,6 +369,17 @@ It also provides a platform for lecturers to request for assignment and thei stu
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "YOUR_PUBLIC_KEY",
+      });
+   })();
+</script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>

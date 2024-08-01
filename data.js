@@ -10,6 +10,8 @@ window.instructors = [
         facebook: "#",
         twitter: "#",
         instagram: "#",
+        email: "lmunyaka@example.com",
+        phone: "1234567890",
         bio: "L Munyaka is a web developer with over 5 years of experience. He has worked on a wide range of projects, from small websites to large web applications. He is passionate about teaching and sharing his knowledge with others."
     },
     {
@@ -20,6 +22,8 @@ window.instructors = [
         facebook: "#",
         twitter: "#",
         instagram: "#",
+        email: "eomondi@example.com",
+        phone: "9876543210",
         bio: "Emmanuel Omondi is a software engineer with over 3 years of experience. He has worked on a wide range of projects, from small websites to large web applications. He is passionate about teaching and sharing his knowledge with others.",
         courses: [2, 12]
     },
@@ -31,6 +35,8 @@ window.instructors = [
         facebook: "#",
         twitter: "#",
         instagram: "#",
+        email: "jkivuti@example.com",
+        phone: "4567890123",
         bio: "James Kivuti is a software developer with over 6 years of experience. He has worked on a wide range of projects, from small websites to large web applications. He is passionate about teaching and sharing his knowledge with others.",
         courses: [3, 8]
     },
@@ -42,6 +48,8 @@ window.instructors = [
         facebook: "#",
         twitter: "#",
         instagram: "#",
+        email: "wmukiri@example.com",
+        phone: "0123456789",
         bio: "Wilfred Mukiri is a graphics designer with over 8 years of experience. He has worked on a wide range of projects, from small websites to large web applications. He is passionate about teaching and sharing his knowledge with others.",
         courses: [9, 10]
 
@@ -54,6 +62,8 @@ window.instructors = [
         facebook: "#",
         twitter: "#",
         instagram: "#",
+        email: "smwangi@example.com",
+        phone: "9870123456",
         bio: "Samuel is a software developer with over 10 years of experience. He has worked on a wide range of projects, from small websites to large web applications. He is passionate about teaching and sharing his knowledge with others.",
         courses: [11]
     },
@@ -65,6 +75,8 @@ window.instructors = [
         facebook: "#",
         twitter: "#",
         instagram: "#",
+        email: "ipius@example.com",
+        phone: "5678901234",
         bio: "Ian is a software developer with over 10 years of experience. He has worked on a wide range of projects, from small websites to large web applications. He is passionate about teaching and sharing his knowledge with others.",
         courses: [1]
     },
@@ -76,13 +88,28 @@ window.instructors = [
         facebook: "#",
         twitter: "#",
         instagram: "#",
+        email: "twaithera@example.com",
+        phone: "9012345678",
         bio: "Tabitha is a cybersecurity engineer with over 3 years of experience. She has worked on a wide range of projects, from small websites to large web applications. She is passionate about teaching and sharing her knowledge with others.",
         courses: [5]
+    },
+    {
+        id: 8,
+        name: "Ngatia Mwai",
+        title: "Systems Testing Engineer",
+        image: "img/instructor-ngatia-mwai.jpg",
+        facebook: "#",
+        twitter: "#",
+        instagram: "#",
+        email: "ngatiamwai@gmail.com",
+        phone: "9012345678",
+        bio: "Ngatia is a systems testing engineer with over 3 years of experience. He has worked on a wide range of projects, from small websites to large web applications. He is passionate about teaching and sharing his knowledge with others.",
+        courses: [5],
     }
 ];
 
 // Function to add instructors
-function addInstructor(newId, newName, newTitle, newImage, newFacebook, newTwitter, newInstagram, newBio, courses) {
+function addInstructor(newId, newName, newTitle, newImage, newFacebook, newTwitter, newInstagram, newEmail, newPhone, newBio, courses) {
     const newInstructor = {
         id: newId,
         name: newName,
@@ -91,6 +118,8 @@ function addInstructor(newId, newName, newTitle, newImage, newFacebook, newTwitt
         facebook: newFacebook,
         twitter: newTwitter,
         instagram: newInstagram,
+        email: newEmail,
+        phone: newPhone,
         bio: newBio,
         courses: courses
     };
@@ -684,6 +713,41 @@ addTestimonial(
     "I learned a lot from this course. The instructor was very knowledgeable and the course material was well-organized."
 );
 
+
+// Array of Masterclasses
+window.masterclasses = [
+    {
+        id: 1,
+        name: courses[1].title,
+        courseId: 1,
+        description: "Deep dive into advanced JavaScript concepts and techniques.",
+        instructor: instructors[courses[1].instructorId].name,
+        fee: 1000,
+        date: "2024-08-15",
+        time: "10:00 AM",
+        duration: "3 hours",
+        venue: "Online",
+        targetAudience: "Intermediate to advanced JavaScript developers",
+        requirements: "Basic understanding of JavaScript",
+        benefits: "Advanced skills in JavaScript, Certificate of completion"
+    },
+    {
+        id: 2,
+        name: "Python for Data Science",
+        courseId: 2,
+        description: "Learn Python programming tailored for data science applications.",
+        instructor: instructors[courses[2].instructorId].name,
+        fee: 120,
+        date: "2024-09-10",
+        time: "2:00 PM",
+        duration: "4 hours",
+        venue: "Online",
+        targetAudience: "Aspiring data scientists",
+        requirements: "Basic programming knowledge",
+        benefits: "Data science skills using Python, Certificate of completion"
+    },
+    // Add more masterclasses as needed
+];
 
 
 
