@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             masterclassElement.innerHTML = `
                 <div class="masterclass-image">
-                    <img src="${courses[masterclass.courseId].image}" alt="${masterclass.name}">
+                    <img src="${masterclass.courseId? courses[masterclass.courseId].image: 'img/masterclass-default.jpg'}" alt="${masterclass.name}">
                     <div class="masterclass-title">${masterclass.name}</div>
                 </div>
                 <div class="masterclass-details">

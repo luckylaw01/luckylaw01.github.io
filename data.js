@@ -12,7 +12,8 @@ window.instructors = [
         instagram: "#",
         email: "lmunyaka@example.com",
         phone: "1234567890",
-        bio: "L Munyaka is a web developer with over 5 years of experience. He has worked on a wide range of projects, from small websites to large web applications. He is passionate about teaching and sharing his knowledge with others."
+        bio: "L Munyaka is a web developer with over 5 years of experience. He has worked on a wide range of projects, from small websites to large web applications. He is passionate about teaching and sharing his knowledge with others.",
+        courses: [1, 6]
     },
     {
         id: 2,
@@ -381,8 +382,8 @@ window.courses = [
             id: 10,
             title: "Geographic Information Systems (GIS)",
             description: "This course is designed to give students a foundational understanding of Geographic Information Systems (GIS). Students will learn the basics of mapping and spatial analysis.",
-            instructorId: instructors[4].id,
-            instructor: instructors[4].name,
+            instructorId: instructors[0].id,
+            instructor: instructors[0].name,
             price: 15000,
             image: "img/course-gis.jpg",
             duration: "1 month",
@@ -600,6 +601,33 @@ window.courses = [
                     subtopics: ["Compute Engine", "Cloud Storage", "BigQuery"]
                 }
             ]
+        },
+        // Add a course called Git and Github taught by L Munyaka
+        {
+            id: 18,
+            title: "Git and Github",
+            description: "This course is designed to give students a foundational understanding of Git and Github. Students will learn the basics of version control and collaboration.",
+            instructorId: instructors[0].id,
+            instructor: instructors[0].name,
+            price: 5000,
+            image: "img/course-git-github.jpg",
+            duration: "1 month",
+            level: "Beginner",
+            students: 15,
+            rating: 5,
+            category: "webDevelopment",
+            isForColleges: true,
+            isOngoing: true,
+            topics: [
+                {
+                    title: "Git",
+                    subtopics: ["Commits", "Branches", "Merges"]
+                },
+                {
+                    title: "Github",
+                    subtopics: ["Repositories", "Pull Requests", "Issues"]
+                }
+            ]
         }
 
 ]
@@ -717,35 +745,23 @@ addTestimonial(
 // Array of Masterclasses
 window.masterclasses = [
     {
+        // One of the the courses taught by L Munyaka
         id: 1,
-        name: courses[1].title,
-        courseId: 1,
-        description: "Deep dive into advanced JavaScript concepts and techniques.",
-        instructor: instructors[courses[1].instructorId].name,
-        fee: 1000,
-        date: "2024-08-15",
-        time: "10:00 AM",
-        duration: "3 hours",
-        venue: "Online",
-        targetAudience: "Intermediate to advanced JavaScript developers",
-        requirements: "Basic understanding of JavaScript",
-        benefits: "Advanced skills in JavaScript, Certificate of completion"
-    },
-    {
-        id: 2,
-        name: "Python for Data Science",
-        courseId: 2,
-        description: "Learn Python programming tailored for data science applications.",
-        instructor: instructors[courses[2].instructorId].name,
-        fee: 120,
-        date: "2024-09-10",
-        time: "2:00 PM",
-        duration: "4 hours",
-        venue: "Online",
-        targetAudience: "Aspiring data scientists",
-        requirements: "Basic programming knowledge",
-        benefits: "Data science skills using Python, Certificate of completion"
-    },
+        name: "Github Student",
+        courseId: 6,
+        description: "Get to know and maximize your student features with the GitHub student package. Copilot, free domain names, and more.",
+        instructor: "L Munyaka",
+        fee: 0,
+        date: "2024-08-05",
+        time: "20:00",
+        duration: "30 Minutes",
+        venue: "SOAP WhatsApp group",
+        targetAudience: "SOAP Product Development Team",
+        requirements: "Be a SOAP Development Team Member",
+        benefits: "Enhanced knowledge of GitHub student features"
+    }
+    
+    
     // Add more masterclasses as needed
 ];
 

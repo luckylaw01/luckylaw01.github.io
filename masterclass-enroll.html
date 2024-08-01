@@ -85,7 +85,7 @@
                     ">Enroll and start learning today.</p>
                 </div>
                 <div class="col-lg-6">
-                    <img src="img/course-1.jpg" alt="" class="img-fluid">
+                    <img src="img/masterclass-default.jpg" alt="" class="img-fluid">
                 </div>
             </div>
         </div>
@@ -116,12 +116,12 @@
                 masterclassEnrollContainer.innerHTML = `
                     <div class="row">
                         <div class="col-md-4">
-                            <img src="img/course-${masterclass.courseId}.jpg" class="img-fluid" alt="${masterclass.name}">
+                            <img src="${masterclass.courseId? courses[masterclass.courseId].image: 'img/masterclass-default.jpg'}" alt="${masterclass.name}" class="img-fluid" alt="${masterclass.name}">
                         </div>
                         <div class="col-md-4">
                             <h5>${masterclass.name}</h5>
                             <p>${masterclass.description}</p>
-                            <div><strong>Instructor:</strong> ${instructors[courses[masterclass.courseId].instructorId].name}</div>
+                            <div><strong>Instructor:</strong> ${instructors[courses[masterclass.courseId].instructorId-1].name}</div>
                             <div><strong>Fee:</strong> $${masterclass.fee}</div>
                             <div><strong>Date:</strong> ${masterclass.date}</div>
                             <div><strong>Time:</strong> ${masterclass.time}</div>
@@ -135,16 +135,16 @@
                         <div class="col-md-4">
                             <h5>About the Instructor</h5>
                             <div class="d-flex align-items-center">
-                                <img src="${instructors[courses[masterclass.courseId].instructorId].image}" class="img-fluid rounded" alt="${instructors[courses[masterclass.courseId].instructorId].name}" style="height:100px">
+                                <img src="${instructors[courses[masterclass.courseId].instructorId-1].image}" class="img-fluid rounded" alt="${instructors[courses[masterclass.courseId].instructorId-1].name}" style="height:100px">
                                 <div class="col-md-8 m-2">
-                                    <h5 class="mt-2">${instructors[courses[masterclass.courseId].instructorId].name}</h5>
+                                    <h5 class="mt-2">${instructors[courses[masterclass.courseId].instructorId-1].name}</h5>
                                     <p class="text-muted">Instructor</p>
                                 </div>
                             </div>
-                            <p>${instructors[courses[masterclass.courseId].instructorId].bio}</p>
+                            <p>${instructors[courses[masterclass.courseId].instructorId-1].bio}</p>
                             <div class="d-flex justify-start">
-                                <a href="#" class="btn btn-primary m-1">View Profile</a>
-                                <a href="#" class="btn btn-primary m-1">Contact</a>
+                                <a href="instructor.html?id=${courses[masterclass.courseId].instructorId}" class="btn btn-primary m-1">View Profile</a>
+                                <a href="instructor.html?id=${courses[masterclass.courseId].instructorId}" class="btn btn-primary m-1">Contact</a>
                             </div>
                         </div>
                     </div>

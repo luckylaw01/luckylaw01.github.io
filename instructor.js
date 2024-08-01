@@ -41,14 +41,15 @@ document.getElementById('instructor-details').innerHTML = `
                         const course = courses.find(course => course.id === courseId);
                         return `
                             <div class="col-md-6">
-                                <div class="course-item bg-light p-4 mb-4">
-                                    <img class="img-fluid mb-3" src="${course.image}" alt="">
-                                    <h4 class="mb-3">${course.title}</h4>
-                                    <p class="mb-0">${course.description}</p>
-                                </div>
+                                <a href="course.html?id=${course.id}">
+                                    <div class="course-item bg-light p-4 mb-4">
+                                        <img class="img-fluid mb-3" src="${course.image}" alt="">
+                                        <h4 class="mb-3">${course.title}</h4>
+                                        <p class="mb-0">${course.description}</p>
+                                    </div>
+                                </a>
                             </div>
-                        `;
-                    }).join('')}
+                        `;    }).join('')}
                 </div>
             </div>
             <div class="col-lg-4">
@@ -58,7 +59,7 @@ document.getElementById('instructor-details').innerHTML = `
                     <a href="mailto: ${instructor.email}">${instructor.email}
                     </a> </p>
                     <p class="mb-2"><i class="bi bi-telephone me-3"></i>${instructor.phone}</p>
-                    <p class="mb-2"><i class="bi bi-geo-alt me-3"></i>${instructor.location}</p>
+                    <p class="mb-2"><i class="bi bi-geo-alt me-3"></i>Nairobi, Kenya</p>
                     <div class="d-flex">
                         <a href="#" class="btn btn-primary me-2">Email</a>
                         <a href="#" class="btn btn-primary">Call</a>
@@ -80,11 +81,12 @@ document.getElementById('other-instructors').innerHTML = `
             <div class="row g-4">
                 ${instructors.filter(otherInstructor => otherInstructor.id !== instructorId).map(otherInstructor => `
                     <div class="col-lg-3 col-md-6">
-                        <div class="instructor
-                        -item bg-light p-4 text-center">
-                            <img class="img-fluid mb-3" src="${otherInstructor.image}" alt="">
-                            <h4 class="mb-3">${otherInstructor.name}</h4>
-                        </div>
+                        <a href="instructor.html?id=${otherInstructor.id}">
+                            <div class="instructor-item bg-light p-4 text-center">
+                                <img class="img-fluid mb-3" src="${otherInstructor.image}" alt="">
+                                <h4 class="mb-3">${otherInstructor.name}</h4>
+                            </div>
+                        </a>
                     </div>
                 `).join('')}
             </div>
