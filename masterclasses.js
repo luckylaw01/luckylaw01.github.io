@@ -13,13 +13,13 @@ document.addEventListener("DOMContentLoaded", function () {
             masterclassElement.innerHTML = `
                 <div class="masterclass-image">
                     <img src="${masterclass.courseId? courses[masterclass.courseId].image: 'img/masterclass-default.jpg'}" alt="${masterclass.name}">
-                    <div class="masterclass-title">${masterclass.name}</div>
+                    <div class="masterclass-title">${masterclass.fee == 0? 'Free': 'Ksh. '+masterclass.fee}</div>
                 </div>
                 <div class="masterclass-details">
                     <h5>${masterclass.name}</h5>
                     <p>${masterclass.description}</p>
                     <div class="info"><strong>Instructor:</strong> ${masterclass.instructor}</div>
-                    <div class="price"><strong>Fee:</strong> $${masterclass.fee}</div>
+                    <div class="price"><strong>Fee:</strong> Ksh. ${masterclass.fee}</div>
                     <div class="date"><strong>Date:</strong> ${masterclass.date}</div>
                     <div class="info"><strong>Time:</strong> ${masterclass.time}</div>
                     <div class="info"><strong>Duration:</strong> ${masterclass.duration}</div>

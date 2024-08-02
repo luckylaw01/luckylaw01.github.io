@@ -748,7 +748,7 @@ window.masterclasses = [
         // One of the the courses taught by L Munyaka
         id: 1,
         name: "Github Student",
-        courseId: 6,
+        courseId: 17,
         description: "Get to know and maximize your student features with the GitHub student package. Copilot, free domain names, and more.",
         instructor: "L Munyaka",
         fee: 0,

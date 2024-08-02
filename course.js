@@ -118,7 +118,7 @@ courseInstructor.innerHTML = `
                         <div class="card-body">
                             <h5 class="card-title">${courses[courseId].instructor}</h5>
                             <p class="card-text">${instructors[instructorId].title}</p>
-                            <a href="" class="btn btn-primary mb-2">View Profile</a>
+                            <a href="instructor.html?id=${instructorId+1}" class="btn btn-primary mb-2">View Profile</a>
                             <a href="${instructors[instructorId].facebook}" class="btn btn-primary mb-2">Facebook</a>
                             <a href="${instructors[instructorId].twitter}" class="btn btn-primary mb-2">Twitter</a>
                             <a href="${instructors[instructorId].instagram}" class="btn btn-primary mb-2">Instagram</a>
