@@ -745,7 +745,6 @@ addTestimonial(
 // Array of Masterclasses
 window.masterclasses = [
     {
-        // One of the the courses taught by L Munyaka
         id: 1,
         name: "Github Student",
         courseId: 17,
