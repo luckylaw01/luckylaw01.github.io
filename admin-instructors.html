@@ -110,7 +110,21 @@ It also provides a platform for lecturers to request for assignment and thei stu
     <div class="container-fluid bg-light py-5">
         <div class="container py-5">
             <div class="row">
-                <div class="col-lg-6">
+
+                <div class="col-lg-3">
+                    <div class="list-group shadow">
+                        <a href="admin.html" class="list-group-item list-group-item-action">Dashboard</a>
+                        <a href="admin-courses.html" class="list-group-item list-group-item-action">Courses</a>
+                        <a href="admin-masterclass.html" class="list-group-item list-group-item-action">Masterclasses</a>
+                        <a href="admin-instructors.html" class="list-group-item list-group-item-action active">Instructors</a>
+                        <a href="admin-students.html" class="list-group-item list-group-item-action">Students</a>
+                        <a href="admin-assignments.html" class="list-group-item list-group-item-action">Assignments</a>
+                        <a href="admin-feedback.html" class="list-group-item list-group-item-action">Feedback</a>
+                        <a href="admin-settings.html" class="list-group-item list-group-item-action">Settings</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-9">
                     <h2 class="fw-bold mb-4">Add Instructor</h2>
                     <form id="add-instructor-form" class="row g-3">
                         <div class="col-12">
@@ -163,63 +177,6 @@ It also provides a platform for lecturers to request for assignment and thei stu
                         </div>
                     </form>
                 </div>
-                <div class="col-lg-6">
-                    <h2 class="fw-bold mb-4">Instructors</h2>
-                    <div id="instructors" class="row g-3">
-                        <!-- Instructor Card -->
-                        <div class="col-12">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title fw-bold">L Munyaka</h5>
-                                    <p class="card-text">Web Development</p>
-                                    <div class="d-flex justify-content-between">
-                                        <a href="#" class="btn btn-primary">Edit</a>
-                                        <a href="#" class="btn btn-danger">Delete</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Instructor Card -->
-                        <div class="col-12">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title fw-bold">J Doe</h5>
-                                    <p class="card-text">Software Engineering</p>
-                                    <div class="d-flex justify-content-between">
-                                        <a href="#" class="btn btn-primary">Edit</a>
-                                        <a href="#" class="btn btn-danger">Delete</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Instructor Card -->
-                        <div class="col-12">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title fw-bold">K Smith</h5>
-                                    <p class="card-text">Software Applications</p>
-                                    <div class="d-flex justify-content-between">
-                                        <a href="#" class="btn btn-primary">Edit</a>
-                                        <a href="#" class="btn btn-danger">Delete</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Instructor Card -->
-                        <div class="col-12">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title fw-bold">P Johnson</h5>
-                                    <p class="card-text">Graphics Design</p>
-                                    <div class="d-flex justify-content-between">
-                                        <a href="#" class="btn btn-primary">Edit</a>
-                                        <a href="#" class="btn btn-danger">Delete</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
             <div id="instructor-code" class="mt-5">
                 <h2 class="fw-bold mb-4">Instructor Code</h2>
@@ -247,8 +204,17 @@ It also provides a platform for lecturers to request for assignment and thei stu
 
     <!-- script for Add instrutor -->
     <script>
+
+        // select the courses dropdown should get the courses from the data.js file array of courses
+        const coursesDropdown = document.getElementById('courses');
+        courses.forEach(course => {
+            const option = document.createElement('option');
+            option.value = course.id;
+            option.innerText = course.title;
+            coursesDropdown.appendChild(option);
+        });
+
         const addInstructorForm = document.getElementById('add-instructor-form');
-        const instructors = document.getElementById('instructors');
         const instructorCode = document.getElementById('instructor-code');
         const copyInstructorCode = document.getElementById('copy-instructor-code');
 
@@ -286,22 +252,6 @@ It also provides a platform for lecturers to request for assignment and thei stu
             const formattedInstructor = JSON.stringify(instructor, null, 4);
             code.innerText = formattedInstructor;
 
-
-            const instructorCard = document.createElement('div');
-            instructorCard.classList.add('col-12');
-            instructorCard.innerHTML = `
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">${name}</h5>
-                        <p class="card-text">${title}</p>
-                        <div class="d-flex justify-content-between">
-                            <a href="#" class="btn btn-primary">Edit</a>
-                            <a href="#" class="btn btn-danger">Delete</a>
-                        </div>
-                    </div>
-                </div>
-            `;
-            instructors.appendChild(instructorCard);
             
         });
 
@@ -324,11 +274,6 @@ It also provides a platform for lecturers to request for assignment and thei stu
         <div data-fillout-id="97hww39BmGus" data-fillout-embed-type="popup" data-fillout-button-text="Save Instructor" data-fillout-dynamic-resize data-fillout-inherit-parameters data-fillout-popup-size="medium"></div><script src="https://server.fillout.com/embed/v1/"></script>
         </div>
     </div>
-
-    
-
-
-
 
                         
 
