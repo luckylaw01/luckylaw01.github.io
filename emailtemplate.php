@@ -1,6 +1,7 @@
 <!-- Design an email template for the School of Advanced programming student when they enroll. I'll use the template with EmailJs service. It should be clean, professional and integrate logo,picturea and links -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Email Template</title>
@@ -63,6 +64,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <img src="logo.png" alt="School of Advanced Programming" class="logo">
@@ -74,11 +76,12 @@
             <p>Thank you for enrolling in the School of Advanced Programming. We are excited to have you as a student and look forward to helping you achieve your goals.</p>
             <p>Our courses are designed to provide you with the skills and knowledge you need to succeed in the field of programming. Whether you are a beginner or an experienced programmer, we have a course that is right for you.</p>
             <p>If you have any questions or need assistance, please do not hesitate to contact us. We are here to help you every step of the way.</p>
-            <a href="https://www.schoolofadvancedprogramming.com">Visit our website</a>
+            <a href="https://soapinstitute.live">Visit our website</a>
         </div>
     </div>
     <footer>
         &copy; 2024 School of Advanced Programming
     </footer>
 </body>
+
 </html>
