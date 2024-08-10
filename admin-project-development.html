@@ -1,0 +1,418 @@
+<!-- This is the SOAP page to add an instructor, view instructors, edit masterclasses and delete instructors. -->
+
+
+ <!-- The School of Advanced Programming (SOAP) is a platform that provides a wide range of courses for students to learn and enhance their skills. The platform offers military grade courses in various ICT fields such as Web Development, Software Engineering Software Applications and Graphics Design. SOAP aims to provide high-quality education to students and help them achieve their career goals.
+It also povides training services to colleges on select ICT courses and also provides consultancy services to colleges on ICT related issues.
+It also provides a platform for lecturers to request for assignment and thei students to access and submit them. 
+
+This is the page fo product development team. 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>SOAP - Projects</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="School of Advanced Programming (SOAP) is a platform that provides a wide range of courses for students to learn and enhance their skills." name="description">
+    <meta content="School of Advanced Programming, SOAP, School of Advanced Programming (SOAP), SOAP Kenya, Programming , SOAP Online, SOAP Courses, Computer Science, SOAP Colleges, SOAP Instructors, SOAP Team, SOAP Testimonials, Quickbooks instructor, SOAP 404, Web Development, Graphics Design" name="keywords">
+
+    <!-- Favicon -->
+    <link href="img/favicon.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <script src="data.js" defer></script>
+    <script src="admin-instructors.js" defer></script>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">S.0.A.P</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary">
+                <!--</a></a> code icon -->
+                <i class="bi bi-code-slash"></i>
+                SOAP</h2>
+                <h5 class="m-0 text-primary">Admin Panel</h5>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mx-auto pt-3 pt-lg-0">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="courses.html" class="nav-link">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="login.html" class="nav-link">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid bg-light py-2">
+        <div class="container py-2">
+            <div class="row">
+
+                <div class="col-lg-3">
+                    <div class="list-group shadow">
+                        <a href="admin.html" class="list-group-item list-group-item-action">Dashboard</a>
+                        <a href="admin-courses.html" class="list-group-item list-group-item-action">Courses</a>
+                        <a href="admin-masterclass.html" class="list-group-item list-group-item-action">Masterclasses</a>
+                        <a href="admin-instructors.html" class="list-group-item list-group-item-action active">Instructors</a>
+                        <a href="admin-students.html" class="list-group-item list-group-item-action">Students</a>
+                        <a href="admin-assignments.html" class="list-group-item list-group-item-action">Assignments</a>
+                        <a href="admin-feedback.html" class="list-group-item list-group-item-action">Feedback</a>
+                        <a href="admin-settings.html" class="list-group-item list-group-item-action">Settings</a>
+                        <a href="admin-project-development.html" class="list-group-item list-group-item-action">Projects</a>
+                    </div>
+                </div>
+            
+            
+    <div class="col-lg-9 container mt-1">
+        <h1 class="text-center mb-4">Rahisi Shop - Project Deliverables</h1>
+        <div class="accordion" id="accordionExample">
+
+            <!-- Research, Content, and Features Definition -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        1. Research, Content, and Features Definition
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ol>
+                            <li>Market analysis and competitor benchmarking.</li>
+                            <li>Define target audience personas.</li>
+                            <li>Identify key features for vendors (e.g., product management, order tracking).</li>
+                            <li>Identify key features for buyers (e.g., wish lists, cart management).</li>
+                            <li>Define user journey maps for vendors and buyers.</li>
+                            <li>Research payment gateway options.</li>
+                            <li>Research and define shipping and logistics integrations.</li>
+                            <li>Define platform policies (return, refund, privacy).</li>
+                            <li>Research and outline tax and compliance requirements.</li>
+                            <li>Research and define multi-language support.</li>
+                            <li>Create a feature list for the admin dashboard.</li>
+                            <li>Outline SEO strategies and content requirements.</li>
+                            <li>Identify and document required third-party integrations.</li>
+                            <li>Define content management system (CMS) requirements.</li>
+                            <li>Research and outline customer support strategies.</li>
+                            <li>Create a detailed sitemap and content structure.</li>
+                            <li>Document legal requirements and regulations.</li>
+                            <li>Identify and plan for mobile app features.</li>
+                            <li>Research and define customer feedback mechanisms.</li>
+                            <li>Create an FAQ document for vendors and buyers.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Design and Detail Content Review -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        2. Data Design and Detail Content Review
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ol>
+                            <li>Design database schema for user management (vendors, buyers, admins).</li>
+                            <li>Design database schema for product management.</li>
+                            <li>Design database schema for orders and transactions.</li>
+                            <li>Design database schema for reviews and ratings.</li>
+                            <li>Define data models for payment and shipping integration.</li>
+                            <li>Create data flow diagrams for user interactions.</li>
+                            <li>Review and validate all content against SEO guidelines.</li>
+                            <li>Create content templates for product descriptions.</li>
+                            <li>Design database schema for multi-language content.</li>
+                            <li>Review and approve all legal content (terms, privacy policy).</li>
+                            <li>Design database schema for notifications and messaging.</li>
+                            <li>Define and document API data structures.</li>
+                            <li>Review and optimize data models for performance.</li>
+                            <li>Design database schema for inventory management.</li>
+                            <li>Design database schema for discounts and promotions.</li>
+                            <li>Review and approve user-generated content guidelines.</li>
+                            <li>Design database schema for customer support tickets.</li>
+                            <li>Create detailed data migration plan.</li>
+                            <li>Document backup and recovery procedures for data.</li>
+                            <li>Review and approve analytics and reporting data structures.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security Detail Implementation and Review -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        3. Security Detail Implementation and Review
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ol>
+                            <li>Conduct a security audit and vulnerability assessment.</li>
+                            <li>Implement SSL/TLS encryption for the platform.</li>
+                            <li>Implement secure authentication (2FA, OAuth).</li>
+                            <li>Define roles and permissions for users.</li>
+                            <li>Review and implement data encryption for sensitive information.</li>
+                            <li>Implement secure payment processing.</li>
+                            <li>Set up a firewall and intrusion detection system.</li>
+                            <li>Review and secure APIs.</li>
+                            <li>Implement GDPR compliance measures.</li>
+                            <li>Conduct penetration testing.</li>
+                            <li>Implement session management and timeout policies.</li>
+                            <li>Review and secure third-party integrations.</li>
+                            <li>Implement regular security patching procedures.</li>
+                            <li>Conduct a review of platform access logs.</li>
+                            <li>Implement DDoS protection.</li>
+                            <li>Review and implement secure file storage.</li>
+                            <li>Define and document incident response procedures.</li>
+                            <li>Set up automated security monitoring and alerts.</li>
+                            <li>Implement security best practices for cloud hosting.</li>
+                            <li>Conduct regular security training for the team.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Design -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        4. Design
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ol>
+                            <li>Create wireframes for all key pages (homepage, product pages, etc.).</li>
+                            <li>Design UI/UX for the vendor dashboard.</li>
+                            <li>Design UI/UX for the buyer dashboard.</li>
+                            <li>Design the admin dashboard.</li>
+                            <li>Design the mobile app interface.</li>
+                            <li>Create a style guide (colors, fonts, buttons).</li>
+                            <li>Design branding materials (logo, banners).</li>
+                            <li>Design email templates for notifications and newsletters.</li>
+                            <li>Create a prototype for user testing.</li>
+                            <li>Design promotional banners for the platform.</li>
+                            <li>Design responsive layouts for all screen sizes.</li>
+                            <li>Create custom icons and illustrations.</li>
+                            <li>Review and finalize all visual assets.</li>
+                            <li>Design landing pages for marketing campaigns.</li>
+                            <li>Design checkout and payment pages.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Front-End Development -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        5. Front-End Development
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ol>
+                            <li>Develop the homepage and main navigation.</li>
+                            <li>Develop product listing and search pages.</li>
+                            <li>Implement responsive design across all pages.</li>
+                            <li>Develop vendor registration and dashboard pages.</li>
+                            <li>Develop buyer registration and dashboard pages.</li>
+                            <li>Implement AJAX for seamless user interactions.</li>
+                            <li>Integrate payment gateway on the front-end.</li>
+                            <li>Develop checkout and cart pages.</li>
+                            <li>Implement front-end validation for forms.</li>
+                            <li>Develop the mobile version of the platform.</li>
+                            <li>Implement SEO-friendly URL structures.</li>
+                            <li>Develop front-end components for notifications and alerts.</li>
+                            <li>Integrate social media sharing features.</li>
+                            <li>Develop user profile and account management pages.</li>
+                            <li>Implement front-end security features (CAPTCHA, etc.).</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Back-End Development -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSix">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        6. Back-End Development
+                    </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ol>
+                            <li>Set up the server and hosting environment.</li>
+                            <li>Develop RESTful APIs for the platform.</li>
+                            <li>Implement user authentication and authorization.</li>
+                            <li>Develop the product management system.</li>
+                            <li>Develop the order and transaction management system.</li>
+                            <li>Implement payment processing on the back-end.</li>
+                            <li>Develop the admin dashboard with necessary controls.</li>
+                            <li>Integrate third-party services (shipping, email, etc.).</li>
+                            <li>Implement the review and rating system.</li>
+                            <li>Develop notification and messaging system.</li>
+                            <li>Implement data backup and recovery mechanisms.</li>
+                            <li>Develop analytics and reporting tools.</li>
+                            <li>Integrate inventory management system.</li>
+                            <li>Develop the discount and promotion system.</li>
+                            <li>Implement customer support and ticketing system.</li>
+                            <li>Develop the multi-language support system.</li>
+                            <li>Implement performance optimization techniques.</li>
+                            <li>Integrate the CMS for content management.</li>
+                            <li>Implement search and filtering functionality on the back-end.</li>
+                            <li>Develop the API documentation.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    </div>
+        </div>
+    </div>
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-2">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="">About Us</a>
+                    <a class="btn btn-link" href="">Contact Us</a>
+                    <a class="btn btn-link" href="">Privacy Policy</a>
+                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="">FAQs & Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Tumaini, Ongata Rongai, Kenya</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+254762303141</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>soapinstitute@onmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Advanced</h4>
+                    <div class="row g-2 pt-2">
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-artificial-intelligence.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-databases.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-backend.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-cyber-security.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-graphics-design.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-gis.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Newsletter</h4>
+                    <p>Get notified about offers, new courses and more.</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">School of Advanced Programming</a>, All Right Reserved.
+
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        More like this <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a><br><br>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="">Home</a>
+                            <a href="">Cookies</a>
+                            <a href="">Help</a>
+                            <a href="">FQAs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
