@@ -245,6 +245,13 @@ It also provides a platform for lecturers to request for assignment and thei stu
 
             const regNumber = data['registration-number'];
 
+            // Show spinner while form is being submitted
+            const spinner = document.createElement('div');
+            spinner.classList.add('spinner-border', 'text-primary');
+            spinner.setAttribute('role', 'status');
+            spinner.innerHTML = '<span class="visually-hidden">Loading...</span>';
+            document.querySelector('.col-12').appendChild(spinner);
+
             fetch('https://script.google.com/macros/s/AKfycbzCzu0zod2zO8hCtqA4dtLBCKPLQgObBYT6gAy6VgaZmUdVunMH0fcwO5Fu6IYuvxL3tg/exec', {
                 method: 'POST',
                 mode: 'no-cors',
@@ -273,6 +280,9 @@ It also provides a platform for lecturers to request for assignment and thei stu
             }).catch(error => {
                 document.querySelector('.alert-danger').classList.remove('d-none');
                 document.querySelector('.alert-danger').textContent = 'There was an error submitting the form.';
+            }).finally(() => {
+                // Remove spinner after form submission
+                spinner.remove();
             });
         };
     </script>

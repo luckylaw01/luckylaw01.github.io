@@ -178,98 +178,67 @@
             }
 
             function handleEnrollmentFormSubmission(event) {
-    event.preventDefault();
-    const formData = new FormData(event.target);
-    const enrollmentData = {
-        masterclassId: formData.get('masterclassId'),
-        masterclassTitle: formData.get('masterclassTitle'),
-        firstName: formData.get('firstName'),
-        lastName: formData.get('lastName'),
-        email: formData.get('email'),
-        phoneNumber: formData.get('phoneNumber'),
-        regNumber: formData.get('regNumber') || ''
-    };
+                event.preventDefault();
+                const formData = new FormData(event.target);
+                const enrollmentData = {
+                    masterclassId: formData.get('masterclassId'),
+                    masterclassTitle: formData.get('masterclassTitle'),
+                    firstName: formData.get('firstName'),
+                    lastName: formData.get('lastName'),
+                    email: formData.get('email'),
+                    phoneNumber: formData.get('phoneNumber'),
+                    regNumber: formData.get('regNumber') || ''
+                };
 
-    fetch('https://script.google.com/macros/s/AKfycbz6t0Vehr9_PzCV7IE9CKUvKdSFr5BDs-9Nkxyp3Qb0r5NdfD9wa14vFRY436bOzb63sg/exec', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        mode: 'cors', // Ensure CORS is enabled
-        body: JSON.stringify(enrollmentData)
-    })
-    .then(response => {
-        if (response.status === 401) {
-            throw new Error('Unauthorized request. Check your Google Apps Script permissions.');
-        }
-        return response.text(); // Get the response text
-    })
-    .then(text => {
-        console.log('Response text:', text); // Log the raw response text for debugging
-        const data = JSON.parse(text); // Parse the response text as JSON
-        if (data.result === 'success') {
-            alert('Enrollment successful!');
-        } else {
-            alert('There was an error with your enrollment. Please try again.');
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('There was an error with your enrollment. Please try again.');
-    });
-}
+                // Show spinner while submitting the form
+                const spinner = `
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                `;
+                masterclassEnrollContainer.insertAdjacentHTML('beforeend', spinner);
 
-
-
-    
-            function handleEnrollmentFormSubmission(event) {
-    event.preventDefault();
-    const formData = new FormData(event.target);
-    const enrollmentData = {
-        masterclassId: formData.get('masterclassId'),
-        masterclassTitle: formData.get('masterclassTitle'),
-        firstName: formData.get('firstName'),
-        lastName: formData.get('lastName'),
-        email: formData.get('email'),
-        phoneNumber: formData.get('phoneNumber'),
-        regNumber: formData.get('regNumber') || ''
-    };
-
-    fetch('https://script.google.com/macros/s/AKfycby5CnrmEOHGW2BBzedR8BLM7Yc--IcGPFqy4A4LNpEHW5ZR6szEofP_r7HrXcheoNs9/exec', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        mode: 'no-cors', // Ensure CORS is enabled
-        body: JSON.stringify(enrollmentData)
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.result === 'success') {
-            alert('Enrollment successful!');
-        } else {
-            //Bootstrap error alert
-            const alert = `
-                <div class="alert alert-danger alert-dismissible fade show mt-2" role="alert">
-                    There was an error with your enrollment. Please try again.
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-            `;
-            masterclassEnrollContainer.insertAdjacentHTML('beforeend', alert);
-        }
-        
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        const alert = `
-            <div class="alert alert-success alert-dismissible fade show mt-2" role="alert">
-                Enrollment successful!
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        `;
-        masterclassEnrollContainer.insertAdjacentHTML('beforeend', alert);
-    });
-}
+                fetch('https://script.google.com/macros/s/AKfycby5CnrmEOHGW2BBzedR8BLM7Yc--IcGPFqy4A4LNpEHW5ZR6szEofP_r7HrXcheoNs9/exec', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    mode: 'no-cors', // Ensure CORS is enabled
+                    body: JSON.stringify(enrollmentData)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.result === 'success') {
+                        alert('Enrollment successful!');
+                    } else {
+                        // Bootstrap error alert
+                        const alert = `
+                            <div class="alert alert-danger alert-dismissible fade show mt-2" role="alert">
+                                There was an error with your enrollment. Please try again.
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        `;
+                        masterclassEnrollContainer.insertAdjacentHTML('beforeend', alert);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    const alert = `
+                        <div class="alert alert-success alert-dismissible fade show mt-2" role="alert">
+                            Enrollment successful!
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    `;
+                    masterclassEnrollContainer.insertAdjacentHTML('beforeend', alert);
+                })
+                .finally(() => {
+                    // Remove the spinner
+                    const spinner = document.querySelector('.spinner-border');
+                    if (spinner) {
+                        spinner.remove();
+                    }
+                });
+            }
 
     
             const urlParams = new URLSearchParams(window.location.search);

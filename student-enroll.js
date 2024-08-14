@@ -135,7 +135,7 @@ const courseSelect = document.getElementById('course');
 // Populate the options with courses names from data.js
 courses.forEach(course => {
     const option = document.createElement('option');
-    option.value = course.id;
+    option.value = course.id + '-' + course.title;
     option.textContent = course.title;
     courseSelect.appendChild(option);
 });
