@@ -130,35 +130,84 @@ function addInstructor(newId, newName, newTitle, newImage, newFacebook, newTwitt
 
 
 // Array of courses
-window.courses = [
+window.courses = [ 
     {
         id: 1,
-        title: "Web Development",
-        description: "This course is designed to give students a foundational understanding of web development. Students will learn the basics of HTML, CSS, and JavaScript.",
-        instructorId: instructors[5].id,
-        instructor: instructors[5].name,
-        price: 10000,
-        image: "img/course-web-design.jpg",
-        duration: "3 months",
-        level: "Beginner",
-        students: 27,
+        title: "Advanced Programming - C++",
+        description: "This course is designed to give students a advanced understanding of C++. Students will learn everything from basic to advanced concepts.",
+        instructorId: instructors[0].id,
+        instructor: instructors[0].name,
+        price: 30000,
+        image: "img/course-oop-c++.jpg",
+        duration: "1 month",
+        level: "Advanced",
+        students: 15,
         rating: 5,
-        category: "webDevelopment",
+        category: "softwareEngineering",
         isForColleges: true,
         isOngoing: true,
         topics: [
+            //very detailed
             {
-                title: "HTML",
-                subtopics: ["Elements", "Attributes", "Tags"]
-            }, 
-            {
-                title: "CSS",
-                subtopics: ["Selectors", "Properties", "Values"]
+                title: "Variables",
+                subtopics: ["Integers", "Floats", "Strings"]
             },
             {
-                title: "JavaScript",
-                subtopics: ["Variables", "Functions", "Loops"]
-            }
+                title: "Functions",
+                subtopics: ["Parameters", "Return Values"]
+            },
+            {
+                title: "Loops",
+                subtopics: ["For Loops", "While Loops"]
+            },
+            {
+                title: "Arrays",
+                subtopics: ["Single Dimensional", "Multi Dimensional"]
+            },
+            {
+                title: "Pointers",
+                subtopics: ["Pointer Arithmetic", "Pointer to Pointer"]
+            },
+            {
+                title: "Classes",
+                subtopics: ["Constructors", "Destructors", "Operator Overloading"]
+            },
+            {
+                title: "Inheritance",
+                subtopics: ["Single Inheritance", "Multiple Inheritance", "Multilevel Inheritance"]
+            },
+            {
+                title: "Polymorphism",
+                subtopics: ["Function Overloading", "Operator Overloading", "Virtual Functions"]
+            },
+            {
+                title: "Templates",
+                subtopics: ["Function Templates", "Class Templates"]
+            },
+            {
+                title: "Exception Handling",
+                subtopics: ["Try", "Catch", "Throw"]
+            },
+            {
+                title: "File Handling",
+                subtopics: ["Reading", "Writing", "Appending"]
+            },
+            {
+                title: "STL",
+                subtopics: ["Vectors", "Lists", "Maps"]
+            },
+            {
+                title: "Algorithms",
+                subtopics: ["Searching", "Sorting", "Recursion"]
+            },
+            {
+                title: "Data Structures",
+                subtopics: ["Stacks", "Queues", "Linked Lists"]
+            },
+            {
+                title: "Design Patterns",
+                subtopics: ["Singleton", "Factory", "Observer"]
+            }                        
         ]
     },
 
@@ -653,6 +702,88 @@ window.courses = [
                 {
                     title: "Layout",
                     subtopics: ["Flexbox", "Grid", "Positioning"]
+                }
+            ]
+        },
+        {
+            id: 20,
+            title: "Web Development",
+            description: "This course is designed to give students a foundational understanding of web development. Students will learn the basics of HTML, CSS, and JavaScript.",
+            instructorId: instructors[5].id,
+            instructor: instructors[5].name,
+            price: 10000,
+            image: "img/course-web-design.jpg",
+            duration: "3 months",
+            level: "Beginner",
+            students: 27,
+            rating: 5,
+            category: "webDevelopment",
+            isForColleges: true,
+            isOngoing: true,
+            topics: [
+                {
+                    title: "HTML",
+                    subtopics: ["Elements", "Attributes", "Tags"]
+                }, 
+                {
+                    title: "CSS",
+                    subtopics: ["Selectors", "Properties", "Values"]
+                },
+                {
+                    title: "JavaScript",
+                    subtopics: ["Variables", "Functions", "Loops"]
+                }
+            ]
+        },
+        {
+            id: 21,
+            title: "JavaScript",
+            description: "This course is designed to give students a foundational understanding of JavaScript. Students will learn the basics of web development.",
+            instructorId: instructors[0].id,
+            instructor: instructors[0].name,
+            price: 5000,
+            image: "img/course-javascript.jpg",
+            duration: "1 month",
+            level: "Beginner",
+            students: 15,
+            rating: 5,
+            category: "webDevelopment",
+            isForColleges: true,
+            isOngoing: true,
+            topics: [
+                {
+                    title: "Variables",
+                    subtopics: ["Numbers", "Strings", "Booleans"]
+                },
+                {
+                    title: "Functions",
+                    subtopics: ["Parameters", "Return Values"]
+                }
+            ]
+        },
+        {
+            id: 22,
+            title: "React",
+            description: "This course is designed to give students a foundational understanding of React. Students will learn the basics of web development.",
+            instructorId: instructors[0].id,
+            instructor: instructors[0].name,
+            price: 5000,
+            image: "img/course-react.jpg",
+            duration: "1 month",
+            level: "Beginner",
+            students: 15,
+            rating: 5,
+            category: "webDevelopment",
+            isForColleges: true,
+            isOngoing: true,
+            topics: [
+                {
+                    title: "Components",
+                    subtopics: ["Props", "State", "Lifecycle"]
+                },
+                {
+                    title: "Hooks",
+                    subtopics: ["useState", "useEffect", "useContext"]
                 }
             ]
         }
