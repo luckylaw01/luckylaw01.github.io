@@ -628,8 +628,35 @@ window.courses = [
                     subtopics: ["Repositories", "Pull Requests", "Issues"]
                 }
             ]
+        },
+        // Add a course Called CSS taught by L Munyaka
+        {
+            id: 19,
+            title: "CSS",
+            description: "This course is designed to give students a foundational understanding of CSS. Students will learn the basics of styling and layout.",
+            instructorId: instructors[0].id,
+            instructor: instructors[0].name,
+            price: 5000,
+            image: "img/course-css.jpg",
+            duration: "1 month",
+            level: "Beginner",
+            students: 15,
+            rating: 5,
+            category: "webDevelopment",
+            isForColleges: true,
+            isOngoing: true,
+            topics: [
+                {
+                    title: "Styling",
+                    subtopics: ["Colors", "Fonts", "Borders"]
+                },
+                {
+                    title: "Layout",
+                    subtopics: ["Flexbox", "Grid", "Positioning"]
+                }
+            ]
         }
-
+        
 ]
 
 
@@ -744,20 +771,21 @@ addTestimonial(
 
 // Array of Masterclasses
 window.masterclasses = [
+    // Add a CSS Masterclass on 2024-08-10 at 20:00 for 1 hour in the SOAP WhatsApp group for the SOAP Product Development Team
     {
-        id: 1,
-        name: "Github Student",
-        courseId: 17,
-        description: "Get to know and maximize your student features with the GitHub student package. Copilot, free domain names, and more.",
+        id: 2,
+        name: "CSS Masterclass",
+        courseId: 18,
+        description: "Learn the basics of CSS styling and layout.",
         instructor: "L Munyaka",
         fee: 0,
-        date: "2024-08-05",
+        date: "Monday August 19, 2024",
         time: "20:00",
-        duration: "30 Minutes",
+        duration: "30 minutes",
         venue: "SOAP WhatsApp group",
         targetAudience: "SOAP Product Development Team",
         requirements: "Be a SOAP Development Team Member",
-        benefits: "Enhanced knowledge of GitHub student features"
+        benefits: "Enhanced knowledge of CSS styling and layout"
     }
     
     
