@@ -268,7 +268,8 @@ It also provides a platform for lecturers to request for assignment and thei stu
                     firstName: data['first-name'],
                     lastName: data['last-name'],
                     courseName: data['course'],
-                    registrationNumber: regNumber
+                    registrationNumber: regNumber,
+                    email: data['email']
                 };
 
                 emailjs.send('service_lgsceer', 'template_tsu8n1l', templateParams, 'IehseaNhUpJYF6_RQ')
