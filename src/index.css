@@ -1,0 +1,6 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* You can remove any existing CSS rules in this file if you want a clean slate */
